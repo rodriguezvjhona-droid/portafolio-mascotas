@@ -1,0 +1,168 @@
+/* Variables de color basadas en tu referencia */
+:root {
+  --color-fondo: #747463;       /* Verde oliva grisáceo para el fondo general */
+  --color-primario: #2c4b50;    /* Azul petróleo para el header y botones */
+  --color-texto: #ffffff;       /* Cambiado a blanco para mejor contraste sobre fondos oscuros */
+  --color-texto-suave: #d1d1d1; 
+  --color-card: #4d3232;        /* Marrón rojizo para las tarjetas */
+  --color-borde: #3a2525;      
+  --color-acento: #a58e74;      /* Un color crema para detalles */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* --- Header y Navegación --- */
+header {
+  background-color: var(--color-primario);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* --- Diseño de Contenedores --- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: var(--color-card);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid var(--color-borde);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--color-acento);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: inline-block;
+}
+
+/* --- Formulario de Contacto --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background: #3d2828;
+  color: white;
+}
+
+button {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #3d6a72;
+}
+
+/* --- Redes Sociales --- */
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 20px;
+  font-size: 1.8rem;
+}
+
+.social-icons a {
+  color: var(--color-acento);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: white;
+}
+
+/* --- Galería de Mascotas --- */
+.galeria-mascotas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.mascotas-card {
+  background-color: var(--color-card);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: scale 0.3s;
+}
+
+.mascotas-card:hover {
+  scale: 1.02;
+}
+
+.mascotas-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Esto evita que las fotos se deformen */
+}
+
+.info {
+  padding: 1.5rem;
+}
+
+.info p {
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-primario);
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
